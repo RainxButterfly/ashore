@@ -1,0 +1,11 @@
+# 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+# SPDX-License-Identifier: Apache-2.0
+
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff2 binary

@@ -1,0 +1,54 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/ui/Badge.module.css
+ * @描述    状态标签视觉：低饱和底色与紧凑字号。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.neutral {
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.accent {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.success {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.info {
+  background: var(--info-soft);
+  color: var(--info);
+}

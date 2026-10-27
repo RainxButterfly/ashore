@@ -1,0 +1,55 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/ui/EmptyState.module.css
+ * @描述    空状态视觉：留白充足、虚线边界与低干扰动作区。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 24px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  text-align: center;
+}
+
+.compact {
+  padding: 28px 20px;
+}
+
+.icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  place-items: center;
+}
+
+.title {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 380px;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.action {
+  margin-top: 18px;
+}

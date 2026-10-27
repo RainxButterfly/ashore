@@ -1,0 +1,68 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/ui/ToastHost.module.css
+ * @描述    提示浮层视觉：高对比药丸、底部居中与移动端避让。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.viewport {
+  position: fixed;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  left: 50%;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  max-width: min(92vw, 460px);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--text);
+  color: var(--bg);
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+  line-height: 1.5;
+  pointer-events: auto;
+  animation: toastIn 180ms var(--ease-out);
+}
+
+.toast svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.success {
+  background: var(--accent-strong);
+  color: var(--accent-contrast);
+}
+
+.danger {
+  background: var(--danger);
+  color: #fffaf7;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+@media (max-width: 900px) {
+  .viewport {
+    bottom: calc(var(--bottom-nav-height) + 16px + env(safe-area-inset-bottom));
+  }
+}

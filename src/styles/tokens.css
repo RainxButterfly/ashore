@@ -1,0 +1,113 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/styles/tokens.css
+ * @描述    设计令牌：宣纸与墨青配色、间距、圆角、阴影和动效曲线。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+:root {
+  color-scheme: light;
+
+  --font-sans:
+    'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  --bg: #f6f4ee;
+  --bg-glow: rgba(47, 111, 98, 0.075);
+  --surface: #fffefa;
+  --surface-2: #efede5;
+  --surface-3: #e7e4da;
+  --text: #1f2421;
+  --text-soft: #3d453f;
+  --muted: #6b7169;
+  --faint: #92978f;
+  --border: #e2ded2;
+  --border-strong: #d2cdbf;
+
+  --accent: #2f6f62;
+  --accent-strong: #24584e;
+  --accent-soft: #e3efea;
+  --accent-contrast: #f7fbf8;
+
+  --danger: #b4472f;
+  --danger-soft: #f7e8e3;
+  --warning: #a97628;
+  --warning-soft: #f6eedc;
+  --success: #3f7a55;
+  --success-soft: #e6f0e8;
+  --info: #3a6478;
+  --info-soft: #e5eef2;
+
+  --shadow-sm: 0 1px 2px rgba(31, 36, 33, 0.04), 0 8px 24px rgba(31, 36, 33, 0.05);
+  --shadow-md: 0 2px 4px rgba(31, 36, 33, 0.05), 0 16px 48px rgba(31, 36, 33, 0.09);
+  --ring: 0 0 0 3px rgba(47, 111, 98, 0.18);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+
+  --sidebar-width: 236px;
+  --content-max: 1120px;
+  --header-height: 64px;
+  --bottom-nav-height: 68px;
+  --scrollbar: #c9c4b7;
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --transition: 160ms var(--ease-out);
+
+  --z-sidebar: 20;
+  --z-nav: 30;
+  --z-dialog: 1000;
+  --z-toast: 1100;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #121513;
+  --bg-glow: rgba(127, 184, 168, 0.08);
+  --surface: #191d1a;
+  --surface-2: #20251f;
+  --surface-3: #262c26;
+  --text: #ece9e2;
+  --text-soft: #c9cec5;
+  --muted: #9aa096;
+  --faint: #737a71;
+  --border: #2c322c;
+  --border-strong: #3a423a;
+
+  --accent: #7fb8a8;
+  --accent-strong: #a3cfc3;
+  --accent-soft: #1e312b;
+  --accent-contrast: #10201b;
+
+  --danger: #e0856e;
+  --danger-soft: #33211d;
+  --warning: #d3a75e;
+  --warning-soft: #322a1c;
+  --success: #86b995;
+  --success-soft: #1d2c21;
+  --info: #8db8c9;
+  --info-soft: #1b2a30;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.35), 0 18px 52px rgba(0, 0, 0, 0.45);
+  --ring: 0 0 0 3px rgba(127, 184, 168, 0.22);
+  --scrollbar: #3a423a;
+}

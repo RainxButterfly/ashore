@@ -1,0 +1,371 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/features/review/ReviewPage.module.css
+ * @描述    复习会话视觉：专注大卡片、答案分层与四档评分按钮。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topMeta {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.progressText {
+  color: var(--faint);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.progressBar {
+  height: 4px;
+}
+
+.sessionCard {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  animation: cardIn 220ms var(--ease-out);
+}
+
+.cardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.source {
+  color: var(--faint);
+  font-size: 10.5px;
+}
+
+.repCount {
+  margin-left: auto;
+  color: var(--faint);
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.question {
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.questionImage {
+  max-height: 320px;
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.revealArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.keyHint {
+  color: var(--faint);
+  font-size: 10.5px;
+  text-align: center;
+}
+
+.answerSection,
+.analysisSection {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.sectionLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.answerText {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.analysisText {
+  color: var(--text-soft);
+  font-size: 13.5px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.ratingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  transition:
+    border-color var(--transition),
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.rating:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.rating:disabled {
+  opacity: 0.55;
+}
+
+.rating strong {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.rating span {
+  color: var(--muted);
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rating em {
+  color: var(--faint);
+  font-size: 9.5px;
+  font-style: normal;
+}
+
+.rating1:hover:not(:disabled) {
+  border-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.rating2:hover:not(:disabled) {
+  border-color: var(--warning);
+  background: var(--warning-soft);
+}
+
+.rating3:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.rating4:hover:not(:disabled) {
+  border-color: var(--success);
+  background: var(--success-soft);
+}
+
+.sessionFoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--faint);
+  font-size: 10.5px;
+}
+
+.emptyWrap {
+  width: 100%;
+  max-width: 620px;
+  margin: 48px auto;
+}
+
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.summary {
+  width: 100%;
+  max-width: 620px;
+  margin: 24px auto;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.summaryIcon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  border-radius: 18px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  place-items: center;
+}
+
+.summaryTitle {
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.summaryText {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.summary > div:nth-of-type(2) {
+  margin-top: 22px;
+}
+
+.distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.distRow {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 10px;
+}
+
+.distLabel {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.distTrack {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-3);
+}
+
+.distFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 480ms var(--ease-out);
+}
+
+.dist1 {
+  background: var(--danger);
+}
+
+.dist2 {
+  background: var(--warning);
+}
+
+.dist3 {
+  background: var(--accent);
+}
+
+.dist4 {
+  background: var(--success);
+}
+
+.distCount {
+  color: var(--text-soft);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.summaryActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (max-width: 640px) {
+  .sessionCard {
+    padding: 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .question {
+    margin-top: 14px;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .ratingGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rating em {
+    display: none;
+  }
+
+  .summary {
+    padding: 24px 20px;
+  }
+
+  .summaryTitle {
+    font-size: 21px;
+  }
+}

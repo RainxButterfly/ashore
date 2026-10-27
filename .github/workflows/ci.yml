@@ -1,0 +1,65 @@
+# 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+# SPDX-License-Identifier: Apache-2.0
+#
+# @文件    .github/workflows/ci.yml
+# @描述    持续集成：文件头、静态检查、类型、单测、构建、包体与端到端测试。
+# @作者    星河一叶Roxy
+# @邮箱    ck_xuv@vip.qq.com
+# @日期    2026-10-27
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check file headers
+        run: npm run check:headers
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests
+        run: npm run test:run
+
+      - name: Build
+        run: npm run build
+
+      - name: Check bundle budgets
+        run: npm run check:bundle
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: End-to-end tests
+        run: npm run test:e2e

@@ -1,0 +1,181 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/features/mistakes/MistakesPage.module.css
+ * @描述    错题列表视觉：紧凑卡片、元信息标签与到期状态提示。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.search {
+  max-width: 320px;
+}
+
+.nodeFilter {
+  width: 200px;
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.resultCount {
+  color: var(--faint);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+
+.card {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--transition),
+    opacity var(--transition),
+    background-color var(--transition);
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+}
+
+.archived {
+  opacity: 0.7;
+  background: var(--surface-2);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.meta {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.source {
+  overflow: hidden;
+  color: var(--faint);
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  gap: 2px;
+}
+
+.content {
+  display: -webkit-box;
+  width: 100%;
+  margin-top: 9px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  transition: color var(--transition);
+}
+
+.content:hover {
+  color: var(--accent-strong);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag,
+.imageTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.created {
+  color: var(--faint);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    padding: 14px;
+  }
+
+  .search {
+    max-width: none;
+    width: 100%;
+  }
+
+  .nodeFilter {
+    width: 100%;
+  }
+
+  .toolbarRight {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .card {
+    padding: 13px 14px;
+  }
+
+  .content {
+    font-size: 13.5px;
+  }
+
+  .created {
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+# SPDX-License-Identifier: Apache-2.0
+#
+# @文件    .husky/commit-msg
+# @描述    校验提交信息是否符合 Conventional Commits 规范。
+# @作者    星河一叶Roxy
+# @邮箱    ck_xuv@vip.qq.com
+# @日期    2026-10-27
+
+npx --no -- commitlint --edit "$1"

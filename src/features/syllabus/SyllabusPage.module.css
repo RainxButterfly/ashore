@@ -1,0 +1,201 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/features/syllabus/SyllabusPage.module.css
+ * @描述    考点树视觉：缩进层级、掌握度条与悬停操作，移动端保持单列。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.search {
+  max-width: 320px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.resultCount {
+  color: var(--faint);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.treeList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background-color var(--transition);
+}
+
+.nodeRow:hover,
+.nodeRow:focus-within {
+  background: var(--surface-2);
+}
+
+.chevron {
+  display: grid;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  color: var(--muted);
+  place-items: center;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.chevron:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.chevronPlaceholder {
+  flex: none;
+  width: 24px;
+}
+
+.nodeMain {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  padding: 2px 0;
+  text-align: left;
+}
+
+.nodeTop {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.nodeTitle {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodeMastery {
+  flex: none;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.nodeBottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nodeBar {
+  max-width: 240px;
+}
+
+.nodeMistakes {
+  flex: none;
+  color: var(--faint);
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+.path {
+  overflow: hidden;
+  color: var(--faint);
+  font-size: 10.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodeActions {
+  display: flex;
+  flex: none;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.nodeRow:hover .nodeActions,
+.nodeRow:focus-within .nodeActions {
+  opacity: 1;
+}
+
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.footerHint {
+  padding: 10px 18px 16px;
+  border-top: 1px solid var(--border);
+  color: var(--faint);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    padding: 14px;
+  }
+
+  .search {
+    max-width: none;
+    width: 100%;
+  }
+
+  .toolbarRight {
+    width: 100%;
+    margin-left: 0;
+    justify-content: space-between;
+  }
+
+  .nodeRow {
+    padding: 10px 8px;
+  }
+
+  .nodeActions {
+    display: none;
+  }
+
+  .nodeBar {
+    flex: 1;
+    max-width: none;
+  }
+
+  .nodeMistakes {
+    display: none;
+  }
+}

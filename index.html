@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+  版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+  SPDX-License-Identifier: Apache-2.0
+
+  @文件    index.html
+  @描述    应用入口：挂载根节点，声明移动端与 PWA 元信息。
+  @作者    星河一叶Roxy
+  @邮箱    ck_xuv@vip.qq.com
+  @日期    2026-10-27
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Ashore 上岸：把考试大纲变成每天的任务，把错题变成上岸的进度。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F4EE" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121513" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Ashore 上岸" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <title>Ashore 上岸 · 备考工作台</title>
+    <script>
+      (function () {
+        try {
+          var cached = window.localStorage.getItem('ashore-theme');
+          var dark =
+            cached === 'dark' ||
+            (cached !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        } catch (error) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+    <style>
+      html {
+        background: #f6f4ee;
+        color-scheme: light;
+      }
+      html[data-theme='dark'] {
+        background: #121513;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme='light']) {
+          background: #121513;
+          color-scheme: dark;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Ashore 需要启用 JavaScript 才能运行。</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

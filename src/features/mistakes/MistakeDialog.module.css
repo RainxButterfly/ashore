@@ -1,0 +1,64 @@
+/**
+ * 版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * @文件    src/features/mistakes/MistakeDialog.module.css
+ * @描述    错题表单视觉：长文本舒适阅读、图片预览与双列元信息。
+ * @作者    星河一叶Roxy
+ * @邮箱    ck_xuv@vip.qq.com
+ * @日期    2026-10-27
+ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.twoCols {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.imageRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.imageHint {
+  padding-top: 8px;
+  color: var(--faint);
+  font-size: 12px;
+}
+
+.preview {
+  position: relative;
+  display: inline-flex;
+  max-width: 240px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+
+.previewImage {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.previewRemove {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--surface);
+}
+
+@media (max-width: 640px) {
+  .twoCols {
+    grid-template-columns: 1fr;
+  }
+}

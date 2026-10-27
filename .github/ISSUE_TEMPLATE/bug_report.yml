@@ -1,0 +1,55 @@
+name: Bug 报告
+description: 描述一个可复现的问题，帮助 Ashore 变得更稳。
+title: '[Bug] '
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请尽量提供可复现的步骤；不要在 Issue 中粘贴密钥或完整的个人复习数据。
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 发生了什么
+      description: 实际看到的结果，以及你期望的结果。
+      placeholder: 例如：在复习页点击“记得”后，页面停在原地。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开 ...
+        2. 点击 ...
+        3. 看到 ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Ashore 版本
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 设备
+      options:
+        - Windows 桌面浏览器
+        - macOS 桌面浏览器
+        - Linux 桌面浏览器
+        - Android
+        - iOS
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 截图、控制台信息或数据规模（例如错题数量）。请先移除个人信息。
+    validations:
+      required: false

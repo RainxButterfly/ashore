@@ -1,0 +1,35 @@
+<!--
+  版权所有 (c) 2026 星河一叶Roxy <ck_xuv@vip.qq.com>
+  SPDX-License-Identifier: Apache-2.0
+
+  @文件    public/icon.svg
+  @描述    应用图标：墨青底、宣纸色日轮、海浪与星点。
+  @作者    星河一叶Roxy
+  @邮箱    ck_xuv@vip.qq.com
+  @日期    2026-10-27
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ashore 上岸">
+  <rect width="512" height="512" rx="112" fill="#24584E" />
+  <circle cx="246" cy="204" r="86" fill="#F7FBF8" opacity="0.95" />
+  <path
+    d="M86 322c45 0 45 28 90 28s45-28 90-28 45 28 90 28 45-28 70-28"
+    stroke="#F7FBF8"
+    stroke-width="26"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.92"
+  />
+  <path
+    d="M108 392c38 0 38 24 76 24s38-24 76-24 38 24 76 24 38-24 62-24"
+    stroke="#F7FBF8"
+    stroke-width="22"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.55"
+  />
+  <path
+    d="M384 86l14 36 36 14-36 14-14 36-14-36-36-14 36-14z"
+    fill="#F7FBF8"
+    opacity="0.9"
+  />
+</svg>

@@ -1,0 +1,21 @@
+# 依赖与构建产物
+node_modules/
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+
+# 本地环境与编辑器
+.env
+.env.*
+!.env.example
+*.local
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*
