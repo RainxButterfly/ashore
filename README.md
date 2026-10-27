@@ -6,6 +6,8 @@ Ashore 是一个本地优先的备考工作台，面向考研、考公、四六�
 
 `v0.1.0` · PWA · React 19 + TypeScript · Apache-2.0
 
+在线体验：[rainxbutterfly.github.io/ashore](https://rainxbutterfly.github.io/ashore/)（首次打开可点「载入示例数据」）
+
 ![Ashore 今日页](docs/screenshots/today-desktop.png)
 
 <p align="center">
